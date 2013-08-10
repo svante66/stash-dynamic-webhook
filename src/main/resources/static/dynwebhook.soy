@@ -1,0 +1,31 @@
+{namespace com.polarislabs.stash.webhook}
+
+/**
+ * @param config
+ * @param? errors
+ */
+{template .formContents}
+
+    {call aui.form.textarea}
+        {param id: 'regexPatterns' /}
+        {param isRequired: true /}
+        {param rows: 8 /}
+        {param value: $config['regexPatterns'] /}
+        {param labelContent}
+            {stash_i18n('stash.webhook.regexPatterns.label', 'Regex Rules')}
+        {/param}
+        {param descriptionText: stash_i18n('stash.webhook.regexPatterns.description', 'Each line of this text area should contain a regex pattern to match and a URL to GET when the pattern matches. The URL may contain back-references to the matched pattern.') /}
+        {param extraClasses: 'full-width-field' /}
+        {param errorTexts: $errors ? $errors['regexPatterns'] : null /}
+    {/call}
+
+    {call widget.aui.form.checkbox}
+        {param id: 'ignoreCerts' /}
+        {param checked: $config['ignoreCerts'] /}
+        {param labelHtml}
+            {stash_i18n('stash.webhook.ignoreCerts.label', 'Skip SSL Certificate Validation')}
+        {/param}
+        {param description: stash_i18n('stash.webhook.ignoreCerts.description', 'When connecting, allow all certificates to be accepted, including self-signed certs') /}
+    {/call}
+    
+{/template}
