@@ -11,8 +11,8 @@
     </organization>
     <name>Stash Dynamic Webhook</name>
     <description>
-    A post-receive/merge hook which can trigger dynamicaly built remote URLs.
-    Perfect for simplifying Jenkins by creating fully asynchronous parameterized builds.
+        A post-receive/merge hook which can trigger dynamicaly built remote URLs.
+        Perfect for simplifying Jenkins by creating fully asynchronous parameterized builds.
     </description>
     
     <packaging>atlassian-plugin</packaging>
