@@ -39,9 +39,9 @@ You can add one match & URL per line. You can create a Jenkins parameterized bui
 build for each noteworthy branch in the project and target specific deploy environments.
 ```
 .*/(dev) http://ci.foobar.com/job/AJob/buildWithParameters?token=AToken&branch=$1&deployto=dev
-.*/(release/.*) http://ci.foobar.com/job/AJob/buildWithParameters?token=AToken&branch=$1&deployto=qa
-.*/(master) http://ci.foobar.com/job/AJob/buildWithParameters?token=AToken&branch=$1&deployto=prod
-.*/(hotfix/.*) http://ci.foobar.com/job/AJob/buildWithParameters?token=AToken&branch=$1&deployto=emer
+.*/(release/.*) http://ci.foobar.com/job/AJob/buildWithParameters?token=AToken&branch=origin/$1&deployto=qa
+.*/(master) http://ci.foobar.com/job/AJob/buildWithParameters?token=AToken&branch=origin/$1&deployto=prod
+.*/(hotfix/.*) http://ci.foobar.com/job/AJob/buildWithParameters?token=AToken&branch=origin/$1&deployto=emer
 ```
 
 ## Release Notes
