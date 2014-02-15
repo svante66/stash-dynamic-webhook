@@ -1,6 +1,6 @@
 # Stash Dynamic Webhook
 
-After making commits to Stash make HTTP(S) GET requests to URLs based upon rule-sets matching refs in the git changeset.
+After making commits to Stash, make HTTP(S) GET requests to URLs based upon rule-sets matching refs in the git changeset.
 
 This allows for making simple regex matches against, say, the branch merged into -- and build a dynamic URL based upon the match.
 
@@ -8,13 +8,13 @@ Specifically, this plugin was developed to allow true CI for Jenkins git project
 
 ## Installation
 ### Set up the Atlassian Plugin SDK
-In order to build this plugin you first need to install the Atlassian Plugin SDK, the documentation for which can be found for Windows, Linux and Mac at:
+In order to build this plugin, you first need to install the Atlassian Plugin SDK, the documentation for which can be found for Windows, Linux and Mac at:
 https://developer.atlassian.com/display/DOCS/Set+up+the+Atlassian+Plugin+SDK+and+Build+a+Project
 
 Upon successful installation, you should have the `atlas-mvn` command in your `$PATH`.
 
 ### Compiling the Plugin
-Simple execute `atlas-mvn install` from within the main `stash-dynamic-webhook` directory (or wherever you downloaded/cloned this repo to).
+Execute `atlas-mvn install` from within the main `stash-dynamic-webhook` directory (or wherever you downloaded/cloned this repo).
 
 ### Installing the Stash Plugin
 -  Login to Stash with a user account that has admin priviledges
