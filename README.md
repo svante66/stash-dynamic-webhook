@@ -6,6 +6,23 @@ This allows for making simple regex matches against, say, the branch merged into
 
 Specifically, this plugin was developed to allow true CI for Jenkins git projects *without SCM polling*, multi-branch configurations, or creating a build per environment.
 
+## Installation
+### Set up the Atlassian Plugin SDK
+In order to build this plugin you first need to install the Atlassian Plugin SDK, the documentation for which can be found for Windows, Linux and Mac at:
+https://developer.atlassian.com/display/DOCS/Set+up+the+Atlassian+Plugin+SDK+and+Build+a+Project
+
+Upon successful installation, you should have the `atlas-mvn` command in your `$PATH`.
+
+### Compiling the Plugin
+Simple execute `atlas-mvn install` from within the main `stash-dynamic-webhook` directory (or wherever you downloaded/cloned this repo to).
+
+### Installing the Stash Plugin
+-  Login to Stash with a user account that has admin priviledges
+-  Click on the Settings cog in the top-right corner
+-  Navigate to Manage Addons
+-  Click Upload a new addon...
+-  Navigate to the `stash-dynamic-webhook/target` directory and select the `stash-dynamic-webhook-1.0-SNAPSHOT.jar` file
+
 ## Setup
 
 Once installed, follow these steps:
